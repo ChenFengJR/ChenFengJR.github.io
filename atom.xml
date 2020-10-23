@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chenfengjr.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-10-23T03:58:30.927Z</updated>
+    <title>冯晨</title>
+    <updated>2020-10-23T03:59:41.938Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chenfengjr.github.io"/>
     <link rel="self" href="https://chenfengjr.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
     <logo>https://chenfengjr.github.io/images/avatar.png</logo>
     <icon>https://chenfengjr.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, 冯晨</rights>
     <entry>
         <title type="html"><![CDATA[翻译《写作风格要素》]]></title>
         <id>https://chenfengjr.github.io/post/fan-yi-lesslessxie-zuo-feng-ge-yao-su-greatergreater/</id>
