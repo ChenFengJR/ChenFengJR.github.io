@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chen Feng | Homepage</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #ffffff;
+            --nav-bg: #ffffff;
+            --border-color: #e5e5e5;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body, html { height: 100%; overflow: hidden; font-family: var(--font-family); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; font-size: 15px; }
+
+        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; height: 60px; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo a { font-size: 17px; font-weight: 600; color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--light-text); text-decoration: none; margin-left: 25px; font-size: 15px; font-weight: 400; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+        
+        .nav-links a.lang-switch { border: 1px solid var(--border-color); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: #555; background-color: #f8fafc; }
+        .nav-links a.lang-switch:hover { background-color: #f1f5f9; border-color: var(--primary-color); }
+
+        .main-wrapper { display: flex; max-width: 1100px; margin: 0 auto; height: 100vh; padding-top: 60px; gap: 60px; }
+        .sidebar { flex: 0 0 260px; text-align: center; padding-top: 40px; height: calc(100vh - 60px); position: sticky; top: 60px; }
+        .profile-img { width: 190px; height: 190px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.06); margin-bottom: 25px; background-color: #f1f5f9; }
+        .sidebar h2 { font-size: 22px; font-weight: 600; color: #111; margin-bottom: 10px; }
+        .sidebar .title { font-size: 13.5px; color: var(--light-text); line-height: 1.5; margin-bottom: 30px; }
+        
+        .sidebar-links { list-style: none; text-align: left; padding-left: 45px; }
+        .sidebar-links li { font-size: 14.5px; margin-bottom: 14px; color: #444; display: flex; align-items: center; }
+        .sidebar-links .icon { margin-right: 12px; font-size: 15px; width: 20px; text-align: center; }
+        .sidebar-links a { color: #444; text-decoration: none; }
+        .sidebar-links a:hover { color: var(--primary-color); text-decoration: underline; }
+        
+        .main-content { flex: 1; padding-top: 40px; padding-bottom: 60px; height: calc(100vh - 60px); overflow-y: auto; padding-right: 15px; }
+        .main-content h3 { font-size: 24px; font-weight: 600; color: #222; margin-bottom: 18px; }
+        .bio-text { color: #333; text-align: justify; margin-bottom: 45px; font-size: 15px; line-height: 1.75; }
+        .bio-text p { margin-bottom: 15px; }
+        
+        .news-section { border-top: 1px solid var(--border-color); padding-top: 35px; }
+        .news-list { list-style: none; margin-top: 15px; }
+        .news-list li { margin-bottom: 14px; font-size: 15px; color: #333; padding-left: 15px; position: relative; line-height: 1.6; }
+        .news-list li::before { content: "•"; position: absolute; left: 0; color: #666; font-weight: bold; }
+        .news-date { font-weight: 600; color: #111; margin-right: 10px; }
+
+        @media (max-width: 768px) {
+            body, html { overflow: auto; }
+            .main-wrapper { flex-direction: column; height: auto; padding-left: 20px; padding-right: 20px; gap: 20px; }
+            .sidebar { flex: 0 0 auto; width: 100%; height: auto; position: static; padding-top: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 30px; }
+            .sidebar-links { display: inline-block; padding-left: 0; }
+            .main-content { height: auto; overflow-y: visible; padding-top: 20px; padding-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index_en.html">Chen Feng</a></div>
+            <div class="nav-links">
+                <a href="index_en.html" class="active">About</a>
+                <a href="publications_en.html">Publications</a>
+                <a href="projects_en.html">Projects</a>
+                <a href="index.html" class="lang-switch">中文</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <img src="avatar.jpg" alt="Chen Feng" class="profile-img" onerror="this.src='https://via.placeholder.com/200?text=Photo'">
+            <h2>Chen Feng</h2>
+            <div class="title">Product Manager / Algorithm Researcher<br>Computer Vision & Industrial Intelligence</div>
+            <ul class="sidebar-links">
+                <li><span class="icon">📍</span> Wuhan, Hubei, China</li>
+                <li><span class="icon">✉️</span> <a href="mailto:fengchen@hgtech.com.cn">Email</a></li>
+                <li><span class="icon">💻</span> <a href="https://github.com/ChenFengJR" target="_blank">GitHub</a></li>
+                <li><span class="icon">🎓</span> <a href="https://scholar.google.com/citations?hl=en&user=VAkB7FEAAAAJ" target="_blank">Google Scholar</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h3>About me</h3>
+            <div class="bio-text">
+                <p>I am the product manager of intelligent sorting products in HGTECH. I received my Ph.D. degree from the School of Artificial Intelligence and Automation at Huazhong University of Science and Technology (HUST) in 2024, advised by Prof. Zhiguo Cao and Prof. Yang Xiao. During my doctoral studies, my research focused on computer vision, deep learning, few-shot learning, and object detection/recognition.</p>
+                <p>Currently, my primary work and research interests lie in intelligent manufacturing, flexible cross-scenario object grasping and handling, multimodal large model integration, and industrial embodied AI. I am dedicated to deeply integrating cutting-edge algorithmic research with practical industrial application scenarios, promoting the deployment and performance breakthroughs of standardized industrial products, and building omni-functional sorting & handling robot.</p>
+            </div>
+            
+            <div class="news-section">
+                <h3>News</h3>
+                <ul class="news-list">
+                    <li><span class="news-date">2026.05</span> Our sorting team's "Robotic Autonomous Assembly & Interactive Puzzle Workcell" was exhibited at the "Optics Valley of China" International Optoelectronic Exposition.</li>
+                    <li><span class="news-date">2026.03</span> Our sorting team's "Robotic Autonomous Assembly & Interactive Puzzle Workcell" was exhibited at Laser World of Photonics China in Shanghai.</li>
+                    <li><span class="news-date">2025.09</span> One paper on low-light crowd counting was accepted by the China Automation Congress (CAC).</li>
+                    <li><span class="news-date">2025.01</span> One paper on infrared small target detection was accepted by IEEE T-GRS.</li>
+                    <li><span class="news-date">2025.01</span> One paper on cross-domain instance detection was accepted by IEEE T-ASE.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冯晨 (Chen Feng) | 个人主页</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #ffffff;
+            --nav-bg: #ffffff;
+            --border-color: #e5e5e5;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body, html { height: 100%; overflow: hidden; font-family: var(--font-family); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; font-size: 15px; }
+
+        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; height: 60px; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo a { font-size: 17px; font-weight: 600; color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--light-text); text-decoration: none; margin-left: 25px; font-size: 15px; font-weight: 400; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+        
+        .nav-links a.lang-switch { border: 1px solid var(--border-color); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: #555; background-color: #f8fafc; }
+        .nav-links a.lang-switch:hover { background-color: #f1f5f9; border-color: var(--primary-color); }
+
+        .main-wrapper { display: flex; max-width: 1100px; margin: 0 auto; height: 100vh; padding-top: 60px; gap: 60px; }
+        .sidebar { flex: 0 0 260px; text-align: center; padding-top: 40px; height: calc(100vh - 60px); position: sticky; top: 60px; }
+        .profile-img { width: 190px; height: 190px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.06); margin-bottom: 25px; background-color: #f1f5f9; }
+        .sidebar h2 { font-size: 22px; font-weight: 600; color: #111; margin-bottom: 10px; }
+        .sidebar .title { font-size: 13.5px; color: var(--light-text); line-height: 1.5; margin-bottom: 30px; }
+        
+        .sidebar-links { list-style: none; text-align: left; padding-left: 45px; }
+        .sidebar-links li { font-size: 14.5px; margin-bottom: 14px; color: #444; display: flex; align-items: center; }
+        .sidebar-links .icon { margin-right: 12px; font-size: 15px; width: 20px; text-align: center; }
+        .sidebar-links a { color: #444; text-decoration: none; }
+        .sidebar-links a:hover { color: var(--primary-color); text-decoration: underline; }
+        
+        .main-content { flex: 1; padding-top: 40px; padding-bottom: 60px; height: calc(100vh - 60px); overflow-y: auto; padding-right: 15px; }
+        .main-content h3 { font-size: 24px; font-weight: 600; color: #222; margin-bottom: 18px; }
+        .bio-text { color: #333; text-align: justify; margin-bottom: 45px; font-size: 15px; line-height: 1.75; }
+        .bio-text p { margin-bottom: 15px; }
+        
+        .news-section { border-top: 1px solid var(--border-color); padding-top: 35px; }
+        .news-list { list-style: none; margin-top: 15px; }
+        .news-list li { margin-bottom: 14px; font-size: 15px; color: #333; padding-left: 15px; position: relative; line-height: 1.6; }
+        .news-list li::before { content: "•"; position: absolute; left: 0; color: #666; font-weight: bold; }
+        .news-date { font-weight: 600; color: #111; margin-right: 10px; }
+
+        @media (max-width: 768px) {
+            body, html { overflow: auto; }
+            .main-wrapper { flex-direction: column; height: auto; padding-left: 20px; padding-right: 20px; gap: 20px; }
+            .sidebar { flex: 0 0 auto; width: 100%; height: auto; position: static; padding-top: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 30px; }
+            .sidebar-links { display: inline-block; padding-left: 0; }
+            .main-content { height: auto; overflow-y: visible; padding-top: 20px; padding-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html">冯晨 (Chen Feng)</a></div>
+            <div class="nav-links">
+                <a href="index.html" class="active">关于我</a>
+                <a href="publications.html">学术论文</a>
+                <a href="projects.html">产品项目</a>
+                <a href="index_en.html" class="lang-switch">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-wrapper">
+        <aside class="sidebar">
+            <img src="avatar.jpg" alt="冯晨" class="profile-img" onerror="this.src='https://via.placeholder.com/200?text=Photo'">
+            <h2>冯晨</h2>
+            <div class="title">产品经理 / 算法研究员<br>计算机视觉与工业智能方向</div>
+            <ul class="sidebar-links">
+                <li><span class="icon">📍</span> 湖北省武汉市</li>
+                <li><span class="icon">✉️</span> <a href="mailto:fengchen@hgtech.com.cn">电子邮箱</a></li>
+                <li><span class="icon">💻</span> <a href="https://github.com/ChenFengJR" target="_blank">GitHub</a></li>
+                <li><span class="icon">🎓</span> <a href="https://scholar.google.com/citations?hl=en&user=VAkB7FEAAAAJ" target="_blank">谷歌学术</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h3>个人简介</h3>
+            <div class="bio-text">
+                <p>我是华工科技智能制造业务板块的智能分拣产品负责人。2024年博士毕业于华中科技大学人工智能与自动化学院，师从曹治国教授与肖阳教授。博士阶段专注于计算机视觉、深度学习、少样本学习、目标检测识别等领域。</p>
+                <p>目前，我的主要工作和研究方向聚焦于智能制造、跨场景柔性目标抓取搬运、多模态大模型融合以及工业具身智能。我致力于将最前沿的算法研究与工业实际应用场景深度结合，推动标准化工业产品的落地与效能跨越，打造通用分拣机器人。</p>
+            </div>
+            
+            <div class="news-section">
+                <h3>最新动态</h3>
+                <ul class="news-list">
+                    <li><span class="news-date">2026.05</span> 分拣团队“智能装配与互动拼图工作站”亮相“中国光谷”国际光电子博览会。</li>
+                    <li><span class="news-date">2026.03</span> 分拣团队“智能装配与互动拼图工作站”亮相慕尼黑上海光博会。</li>
+                    <li><span class="news-date">2025.09</span> 一篇关于低光照人群计数的论文被中国自动化大会接收。</li>
+                    <li><span class="news-date">2025.01</span> 一篇关于红外微小目标检测的论文被 IEEE T-GRS 接收。</li>
+                    <li><span class="news-date">2025.01</span> 一篇关于跨域实例检测的论文被 IEEE T-ASE 接收。</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Chen Feng</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #ffffff;
+            --nav-bg: #ffffff;
+            --border-color: #e5e5e5;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-family); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; font-size: 15px; }
+
+        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; }
+        .nav-container { max-width: 1000px; margin: 0 auto; padding: 15px 20px; display: table; width: 100%; }
+        .nav-logo { display: table-cell; font-size: 17px; font-weight: 600; color: var(--primary-color); vertical-align: middle; }
+        .nav-logo a { color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: table-cell; text-align: right; vertical-align: middle; }
+        .nav-links a { color: var(--light-text); text-decoration: none; margin-left: 25px; font-size: 15px; font-weight: 400; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+
+        .nav-links a.lang-switch { border: 1px solid var(--border-color); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: #555; background-color: #f8fafc; }
+        .nav-links a.lang-switch:hover { background-color: #f1f5f9; border-color: var(--primary-color); }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 100px 20px 60px 20px; }
+        section { padding: 40px 0; }
+        h2 { font-size: 22px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #222; }
+        
+        .pub-list { list-style: none; }
+        .pub-item { margin-bottom: 22px; padding-left: 20px; position: relative; }
+        .pub-item::before { content: "[•]"; position: absolute; left: 0; top: 0; color: #999; font-size: 13px; }
+        .pub-title { font-weight: 600; color: #111; text-decoration: none; }
+        .pub-title:hover { color: var(--primary-color); text-decoration: underline; }
+        .pub-authors { color: #444; margin: 2px 0; }
+        .pub-authors .me { font-weight: bold; text-decoration: underline; }
+        .pub-venue { font-style: italic; color: var(--light-text); font-size: 14px; }
+
+        @media (max-width: 768px) {
+            .nav-container { display: block; text-align: center; }
+            .nav-logo, .nav-links { display: block; text-align: center; width: 100%; }
+            .nav-links { margin-top: 10px; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index_en.html">Chen Feng</a></div>
+            <div class="nav-links">
+                <a href="index_en.html">About</a>
+                <a href="publications_en.html" class="active">Publications</a>
+                <a href="projects_en.html">Projects</a>
+                <a href="publications.html" class="lang-switch">中文</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="publications">
+            <h2>Publications</h2>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Nighttime Crowd Counting with Stable Diffusion and Textual Cues under Uneven Illumination”</a>
+                    <div class="pub-authors">Jian Cheng, <span class="me">Chen Feng*</span></div>
+                    <div class="pub-venue">China Automation Congress (CAC), 2025. (IEEE)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“An illumination-robust feature decomposition approach for low-light crowd counting”</a>
+                    <div class="pub-authors">Jian Cheng, <span class="me">Chen Feng</span>, Yang Xiao, Zhiguo Cao</div>
+                    <div class="pub-venue">Pattern Recognition Letters, 2025. (Elsevier)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“CODNet: Infrared Small Target Detection by Mitigating the Curse of Dimensionality”</a>
+                    <div class="pub-authors">Shuaiyuan Du, <span class="me">Chen Feng</span>, Yang Xiao, Zhiguo Cao</div>
+                    <div class="pub-venue">IEEE Transactions on Geoscience and Remote Sensing, 2025. (IEEE)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“One-Shot Cross-Domain Instance Detection With Universal Representation”</a>
+                    <div class="pub-authors"><span class="me">Chen Feng</span>, Jian Cheng, Yang Xiao, Zhiguo Cao</div>
+                    <div class="pub-venue">IEEE Transactions on Automation Science and Engineering, 2025. (IEEE)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Advance One-Shot Multispectral Instance Detection With Text's Supervision”</a>
+                    <div class="pub-authors"><span class="me">Chen Feng</span>, Jian Cheng, Yang Xiao, Zhiguo Cao</div>
+                    <div class="pub-venue">IEEE Signal Processing Letters, 2024. (IEEE)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Late better than early: A decision-level information fusion approach for RGB-Thermal crowd counting with illumination awareness”</a>
+                    <div class="pub-authors">Jian Cheng, <span class="me">Chen Feng</span>, Yang Xiao, Zhiguo Cao</div>
+                    <div class="pub-venue">Neurocomputing, 2024. (Elsevier)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Multi-spectral template matching based object detection in a few-shot learning manner”</a>
+                    <div class="pub-authors"><span class="me">Chen Feng</span>, Zhiguo Cao, Yang Xiao, Zhiwen Fang, Joey Tianyi Zhou</div>
+                    <div class="pub-venue">Information Sciences, 2023. (Elsevier)</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Represent, compare, and learn: A similarity-aware framework for class-agnostic counting”</a>
+                    <div class="pub-authors">Min Shi, Hao Lu, <span class="me">Chen Feng</span>, Chengxin Liu, Zhiguo Cao</div>
+                    <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022.</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“P2b: Point-to-box network for 3d object tracking in point clouds”</a>
+                    <div class="pub-authors">Haozhe Qi, <span class="me">Chen Feng</span>, Zhiguo Cao, Feng Zhao, Yang Xiao</div>
+                    <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020.</div>
+                </li>
+                <li class="pub-item">
+                    <a href="#" class="pub-title" target="_blank">“Parallel network to learn novelty from the known”</a>
+                    <div class="pub-authors">Shuaiyuan Du, Chaoyi Hong, Zhiyu Pan, <span class="me">Chen Feng*</span>, Zhiguo Cao</div>
+                    <div class="pub-venue">International Conference on Pattern Recognition (ICPR), 2021. (IEEE)</div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>

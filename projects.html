@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品项目 | 冯晨 (Chen Feng)</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333333;
+            --light-text: #666666;
+            --bg-color: #ffffff;
+            --nav-bg: #ffffff;
+            --border-color: #e5e5e5;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-family); color: var(--text-color); background-color: var(--bg-color); line-height: 1.6; font-size: 15px; }
+
+        nav { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; }
+        .nav-container { max-width: 1000px; margin: 0 auto; padding: 15px 20px; display: table; width: 100%; }
+        .nav-logo { display: table-cell; font-size: 17px; font-weight: 600; color: var(--primary-color); vertical-align: middle; }
+        .nav-logo a { color: var(--primary-color); text-decoration: none; }
+        .nav-links { display: table-cell; text-align: right; vertical-align: middle; }
+        .nav-links a { color: var(--light-text); text-decoration: none; margin-left: 25px; font-size: 15px; font-weight: 400; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-color); font-weight: 500; }
+
+        .nav-links a.lang-switch { border: 1px solid var(--border-color); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: #555; background-color: #f8fafc; }
+        .nav-links a.lang-switch:hover { background-color: #f1f5f9; border-color: var(--primary-color); }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 100px 20px 60px 20px; }
+        section { padding: 40px 0; }
+        h2 { font-size: 22px; font-weight: 600; letter-spacing: 1px; margin-bottom: 25px; color: #222; }
+        
+        .project-item { margin-bottom: 40px; }
+        .project-title { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 10px; }
+        .project-desc { color: #444; text-align: justify; margin-bottom: 20px; }
+        .project-img-wrapper { width: 100%; max-width: 650px; margin: 0 auto; text-align: center; }
+        .project-img { width: 100%; height: auto; display: block; border: 1px solid #e2e8f0; border-radius: 4px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); background-color: #f8fafc; }
+
+        @media (max-width: 768px) {
+            .nav-container { display: block; text-align: center; }
+            .nav-logo, .nav-links { display: block; text-align: center; width: 100%; }
+            .nav-links { margin-top: 10px; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html">冯晨 (Chen Feng)</a></div>
+            <div class="nav-links">
+                <a href="index.html">关于我</a>
+                <a href="publications.html">学术论文</a>
+                <a href="projects.html" class="active">产品项目</a>
+                <a href="projects_en.html" class="lang-switch">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="projects">
+            <h2>产品项目</h2>
+            <div class="project-item">
+                <div class="project-title">1. 智能装配与互动拼图工作站</div>
+                <div class="project-desc">
+                    智能分拣系统无缝融合高精度视觉识别与实时轨迹规划，实现字母零件精准装配及创意图形即时复现。
+                </div>
+                <div class="project-img-wrapper">
+                    <img src="int_assem_inter_puzzle.jpg" alt="智能装配与互动拼图工作站" class="project-img" onerror="this.src='https://via.placeholder.com/650x400?text=int_assem_inter_puzzle.jpg+Missing'">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
